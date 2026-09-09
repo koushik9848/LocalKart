@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment
+.env
+**/.env
+
+# Build
+dist/
+**/dist/
+build/
+**/build/
+
+# Vite
+frontend/.vite/
+
+# Prisma
+prisma/*.db
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Local uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
