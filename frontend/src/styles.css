@@ -227,6 +227,36 @@ main { min-width: 0; }
 .site-footer { margin-top: 3rem; padding-top: 2.2rem; }
 .footer-main { gap: 2rem; grid-template-columns: 1.4fr .7fr 1fr; padding-bottom: 2rem; }
 .footer-intro > p, .footer-note > p:last-child { max-width: 330px; }
+.cart-page { padding: 3rem 0 5rem; }
+.cart-page__heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 2rem; }
+.cart-page__heading h1 { font: 700 clamp(2.2rem, 5vw, 4rem)/1 "Trebuchet MS", Arial, sans-serif; letter-spacing: -.07em; margin: 0; }
+.cart-page__heading h1 span { color: var(--muted); font-size: .9rem; letter-spacing: 0; }
+.cart-page__heading .ui-button { border-radius: 999px; gap: .35rem; padding: .65rem 1rem; }
+.cart-layout { align-items: start; display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1.6fr) minmax(260px, .8fr); }
+.cart-lines { display: flex; flex-direction: column; gap: .75rem; }
+.cart-line { align-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: 15px; display: grid; gap: 1rem; grid-template-columns: 88px minmax(0, 1fr) auto; padding: .85rem; }
+.cart-line__art { align-items: center; background: linear-gradient(145deg, #d4f0e8, #f4c38e); border-radius: 11px; color: var(--ink); display: flex; font: 2.2rem Georgia, serif; height: 88px; justify-content: center; }
+.cart-line__info h2 { font: 700 1rem "Trebuchet MS", Arial, sans-serif; letter-spacing: -.03em; margin: .2rem 0 .35rem; }
+.cart-line__info .product-meta { margin: 0; }
+.cart-remove { background: transparent; border: 0; color: var(--coral); cursor: pointer; font: .68rem Arial, sans-serif; margin-top: .7rem; padding: 0; }
+.cart-line__actions { align-items: end; display: flex; flex-direction: column; gap: 1rem; }
+.cart-line__actions strong { font-size: 1.05rem; }
+.quantity-control { align-items: center; border: 1px solid var(--line); border-radius: 8px; display: flex; gap: .7rem; padding: .15rem; }
+.quantity-control .ui-button { border-radius: 5px; font-size: 1rem; min-height: 1.8rem; min-width: 1.8rem; }
+.quantity-control span { font: 700 .8rem Arial, sans-serif; min-width: 1rem; text-align: center; }
+.cart-summary { background: var(--ink); border-radius: 16px; color: white; padding: 1.4rem; position: sticky; top: 90px; }
+.cart-summary .kicker { color: var(--acid); }
+.cart-summary > div { align-items: center; border-bottom: 1px solid rgba(255, 255, 255, .16); display: flex; font-size: .8rem; justify-content: space-between; padding: .8rem 0; }
+.cart-summary .summary-free { color: var(--acid); }
+.cart-summary .summary-total { border-bottom: 0; font-size: 1rem; padding-top: 1.2rem; }
+.cart-summary .summary-total strong { font-size: 1.3rem; }
+.checkout-button { border-radius: 9px; margin-top: 1rem; padding: .8rem; width: 100%; }
+.summary-note { color: #b9c5cc; font: .68rem/1.45 Arial, sans-serif; margin: .8rem 0 0; }
+.cart-empty { align-items: center; background: var(--paper); border: 1px dashed var(--line); border-radius: 16px; display: flex; flex-direction: column; padding: 4rem 1rem; text-align: center; }
+.cart-empty__icon { align-items: center; background: var(--teal); border-radius: 50%; color: var(--ink); display: flex; font-size: 2.4rem; height: 76px; justify-content: center; margin-bottom: 1rem; width: 76px; }
+.cart-empty h2 { font: 700 1.35rem "Trebuchet MS", Arial, sans-serif; margin: 0; }
+.cart-empty p { color: var(--muted); font-size: .82rem; margin: .5rem 0 1.4rem; }
+.cart-empty .ui-button { border-radius: 8px; padding: .75rem 1rem; }
 @media (max-width: 1080px) {
   .app-shell { padding: 0 2rem; }
   .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -253,4 +283,11 @@ main { min-width: 0; }
   .product-grid { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem .1rem 1rem; scroll-snap-type: x mandatory; }
   .product-card { flex: 0 0 72%; scroll-snap-align: start; }
   .product-art { min-height: 165px; }
+  .cart-page { padding-top: 2rem; }
+  .cart-page__heading { align-items: start; flex-direction: column; gap: 1rem; }
+  .cart-layout { grid-template-columns: 1fr; }
+  .cart-summary { position: static; }
+  .cart-line { grid-template-columns: 62px minmax(0, 1fr); }
+  .cart-line__art { height: 62px; }
+  .cart-line__actions { align-items: start; flex-direction: row; grid-column: 2; justify-content: space-between; }
 }

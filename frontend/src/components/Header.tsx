@@ -25,7 +25,7 @@ export function Header({ location, cartCount, onCart }: HeaderProps) {
       {links.map((link, index) => <a className={index === 0 ? "is-current" : undefined} href={link.href} key={link.href} onClick={closeMenu}>{link.label}</a>)}
     </nav>
     <div className="header-actions">
-      <Button variant="ghost" className="cart-button" onClick={onCart} aria-label={`Cart with ${cartCount} items`}><span aria-hidden="true">▱</span> Cart <b>{cartCount}</b></Button>
+      <Button variant="ghost" className="cart-button" onClick={onCart} aria-label={`Cart with ${cartCount} item${cartCount === 1 ? "" : "s"}`}><span aria-hidden="true">▱</span> Cart <b>{cartCount}</b></Button>
       <Button variant="ghost" iconOnly className="menu-button" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="primary-navigation" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}><span aria-hidden="true">{menuOpen ? "×" : "≡"}</span></Button>
     </div>
   </header>;
